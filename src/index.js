@@ -1,15 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import App from "./App";
 
-import "./styles.css";
-
-function App() {
-  return (
-    <div className="App">
-      <h1>Hello Salehe</h1>
-    </div>
-  );
-}
+import { Provider } from "react-redux";
+import store from "./store";
 
 const rootElement = document.getElementById("root");
-ReactDOM.render(<App />, rootElement);
+ReactDOM.render(
+  <Provider store={store}>
+    <App />
+  </Provider>,
+  rootElement
+);
